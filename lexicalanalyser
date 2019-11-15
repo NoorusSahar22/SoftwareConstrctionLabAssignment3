@@ -7,7 +7,7 @@ def identifier(user):
         res="*It is Identifier*"
     
     return flg
-
+#this will return the boolean value for identifier
 def digit(user):
     rgx=r"^[0-9]+$"
     flg=re.match(rgx, user)
@@ -16,7 +16,7 @@ def digit(user):
     
         
     return flg
-
+#this will return the boolean value for digit
 def statement(user):
     rgx=r"^(int|float|string)\s+[a-zA-Z]+[0-9]\s(=|==|!=|<=|>=|<|>)\s*[a-zA-Z0-9]+;$"
     flg=re.match(rgx, user)
@@ -24,7 +24,7 @@ def statement(user):
         res="*It is Statement*"
     
     return flg
-
+#this will return the boolean value for statement
 def operator(user):
     rgx=r"(&&|\|\|)"
     flg=re.match(rgx, user)
@@ -33,7 +33,7 @@ def operator(user):
     else:
         res="NOT a Operator."
     return res
-
+#this will return the boolean value for operator
 def dataType(user):
     rgx=r"int|double|float|String|boolean|char"
     flg=re.match(rgx, user)
